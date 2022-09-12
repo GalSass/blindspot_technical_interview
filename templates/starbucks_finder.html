@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Starbucks Locator</title>
+</head>
+<body>
+ <style>
+body {
+  background-image: url('../static/coffee.jpg');
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+<img src="../static/logo-1971.png" alt="starbucks logo" width="150" height="150">
+<h1 style="color:blanchedalmond">Starbucks Locator</h1>
+<br>
+<h3 style="color:blanchedalmond"> Please Enter Your address and the distance for Starbucks</h3>
+<br>
+<form action="/data" method = "POST" style="color:blanchedalmond">
+    <p>Address <input type = "text" name = "Address" /></p>
+    <p>Distance <input type = "text" name = "Distance" /></p>
+    <p><input type = "submit" value = "Submit" /></p>
+</form>
+</body>
+</html>
