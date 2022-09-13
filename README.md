@@ -1,7 +1,7 @@
 # blindspot_technical_interview
 
 This Program takes a given address and a distance in kilometers and display a of all Starbucks locations within the radius.
-
+For a list of modules please see requirements.txt
 Flow:
 1.FLASK web application with a simple html form.
 2.Taking the variables from the form after POST request.
