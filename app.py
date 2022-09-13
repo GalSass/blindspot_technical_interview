@@ -1,12 +1,11 @@
-from flask import Flask, request, render_template, session, redirect
-import jinja2
+from flask import Flask, request, render_template
 import pandas as pd
 from geopy.geocoders import Nominatim
 from geopy import distance
+import matplotlib as mpl
 
 geolocator = Nominatim(user_agent="app.py")
 app = Flask(__name__)
-
 
 @app.route('/')
 def starbucks_finder():
@@ -58,9 +57,9 @@ def create_relevant_table(sb_locations, relevant_sb_indexes):
     relevant_sb_df = sb_locations.iloc[relevant_sb_indexes]
     return relevant_sb_df
 
-
 def df_to_html(relevant_sb_df):
-    html_table = relevant_sb_df.to_html(header="true", table_id="relevant_sb_df")
+    decorated_df = relevant_sb_df.style.set_properties(**{'color': 'black', 'background': 'white','axis-color': 'grey'})
+    html_table = decorated_df.to_html(header="true", table_id="relevant_sb_df")
     return html_table
 
 
