@@ -82,5 +82,7 @@ def run_search(address, distance_from_sb):
     relevant_sb_df = create_relevant_table(sb_locations, relevant_sb_indexes)
     return df_to_html(relevant_sb_df)
 
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
+
